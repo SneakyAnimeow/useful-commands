@@ -14,6 +14,7 @@ def os = System.getProperty("os.name").toLowerCase()
 #UBUNTU 16-20
 
 #ARM
+  
 sudo apt update -y && 
 sudo apt upgrade -y &&
 sudo apt install screen -y &&
@@ -46,6 +47,7 @@ sudo ufw reload &&
 sudo ufw enable
 
 #amd64
+  
 sudo apt update -y && 
 sudo apt upgrade -y &&
 sudo apt install screen -y &&
