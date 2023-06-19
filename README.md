@@ -10,6 +10,23 @@ jdeps --ignore-missing-deps -q -s -recursive .\build\libs\fat-jar.jar
 
 def os = System.getProperty("os.name").toLowerCase()
 
+///UFW
+sudo iptables -L &&
+sudo iptables-save > ~/iptables-rules &&
+sudo iptables -P INPUT ACCEPT &&
+sudo iptables -P OUTPUT ACCEPT &&
+sudo iptables -P FORWARD ACCEPT &&
+sudo iptables -F &&
+sudo iptables --flush &&
+sudo apt install -y ufw &&
+sudo ufw allow ssh &&
+sudo ufw allow 80 &&
+sudo ufw allow 443 &&
+sudo ufw allow 21 &&
+sudo ufw default deny incoming &&
+sudo ufw reload &&
+sudo ufw enable
+
 ///INSTALLING LUA LAPIS ON ORACLE CLOUD (x86-64/AMD64 && ARM) && SWITCHING FROM IPTABLES TO UFW
 #UBUNTU 16-20
 
