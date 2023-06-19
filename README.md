@@ -10,7 +10,9 @@ jdeps --ignore-missing-deps -q -s -recursive .\build\libs\fat-jar.jar
 
 def os = System.getProperty("os.name").toLowerCase()
 
-///UFW
+#UFW
+
+
 sudo iptables -L &&
 sudo iptables-save > ~/iptables-rules &&
 sudo iptables -P INPUT ACCEPT &&
